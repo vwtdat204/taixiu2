@@ -1,0 +1,64 @@
+/* --- Chung Body --- */
+body {
+  font-family: Inter, 'Segoe UI', Roboto, Arial;
+  background: #0b0705;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  margin:0;
+  padding:0;
+}
+
+/* --- Topbar --- */
+.topbar{height:72px;background:linear-gradient(180deg,#3b220f,#1f1209);display:flex;align-items:center;justify-content:space-between;padding:10px 28px;border-bottom:4px solid rgba(255,200,80,0.06)}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-img{width:56px;height:56px;border-radius:8px}
+.menu{display:flex;gap:14px;align-items:center}
+.menu .item{padding:8px 14px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);color:#ffdca1;font-weight:700}
+
+/* --- Hero / Carousel --- */
+.container{max-width:1240px;margin:18px auto;padding:0 18px}
+.hero{display:flex;gap:18px;align-items:flex-start;position:relative}
+.games-carousel{display:flex;gap:18px;overflow:hidden;width:800px;scroll-behavior:smooth}
+.game-card{min-width:220px;border-radius:14px;background:linear-gradient(180deg,#2b190f,#1a0f09);border:2px solid rgba(255,200,80,0.06);padding:12px;cursor:pointer;transition:transform .22s ease,box-shadow .22s}
+.game-card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 18px 60px rgba(0,0,0,.7)}
+.art{height:190px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:#ffd86b;border:2px solid rgba(255,255,255,0.03)}
+.game-title{margin-top:10px;font-weight:800;color:#ffd86b;font-size:20px;text-align:center}
+.game-amt{margin-top:8px;text-align:center;color:#ffdca1;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:6px;border-radius:8px}
+
+/* --- Carousel Buttons --- */
+.carousel-controls{position:absolute;top:40%;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none}
+.carousel-controls button{pointer-events:all;background:rgba(0,0,0,0.3);border:none;color:#ffd86b;font-size:32px;padding:6px 12px;border-radius:8px;cursor:pointer;transition:0.2s}
+.carousel-controls button:hover{background:rgba(255,200,80,0.3)}
+
+/* --- Side Panel --- */
+.side{width:340px;display:flex;flex-direction:column;gap:12px}
+.player{background:linear-gradient(180deg,#1a100b,#130a07);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:12px;align-items:center}
+.avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(180deg,#ffdca1,#ffb35c);display:flex;align-items:center;justify-content:center;color:#6b3100;font-weight:900}
+.actions{display:flex;gap:8px;margin-top:8px}
+.actions .a{flex:1;padding:10px;border-radius:10px;background:linear-gradient(180deg,#ffb35c,#ff8b1f);color:#3b1700;font-weight:800;text-align:center;cursor:pointer}
+.actions .b{background:linear-gradient(180deg,#ffc107,#ffd86b);color:#3b1700}
+.quick{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:12px}
+.quick .btn{background:linear-gradient(180deg,#b07a27,#f3d07a);padding:10px 14px;border-radius:10px;font-weight:800;color:#602b00;box-shadow:0 8px 20px rgba(0,0,0,.5)}
+
+/* --- Modal Popup --- */
+.modal{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:opacity .2s}
+.modal.open{visibility:visible;opacity:1}
+.modal .box{width:780px;background:linear-gradient(180deg,#2a160b,#1a1008);border-radius:12px;padding:18px;border:2px solid rgba(255,200,80,0.08);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.close{position:absolute;right:18px;top:18px;background:rgba(255,255,255,0.05);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+/* --- Tài Xỉu --- */
+.taixiu-container{max-width:800px;margin:30px auto;text-align:center}
+.dice-area{display:flex;gap:12px;justify-content:center;margin:20px 0}
+.dice img{width:80px;height:80px}
+.result{font-size:24px;margin-bottom:12px}
+.bet-buttons{display:flex;gap:8px;justify-content:center;margin-bottom:12px}
+.bet-btn{padding:8px 12px;background:linear-gradient(180deg,#ffd86b,#ffb35c);border:none;border-radius:8px;color:#3b1700;font-weight:700;cursor:pointer}
+.countdown{margin-top:12px;font-size:18px;color:#ffd86b}
+
+/* --- Responsive --- */
+@media(max-width:1100px){
+  .hero{flex-direction:column;height:auto}
+  .games-carousel{width:100%;overflow-x:auto}
+  .game-card{min-width:180px}
+  .side{width:100%}
+}
