@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tài Xỉu Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- --- Tài Xỉu Container --- -->
+  <div class="taixiu-container">
+    <h1>Tài Xỉu Demo</h1>
+
+    <!-- --- Dice Area --- -->
+    <div class="dice-area">
+      <div class="dice" id="dice1"><img src="assets/dice1.png"></div>
+      <div class="dice" id="dice2"><img src="assets/dice1.png"></div>
+      <div class="dice" id="dice3"><img src="assets/dice1.png"></div>
+    </div>
+
+    <!-- --- Result --- -->
+    <div class="result">
+      <span id="total">Tổng: 3</span> - <span id="outcome">Xỉu</span>
+    </div>
+
+    <!-- --- Bet Buttons --- -->
+    <div class="bet-buttons">
+      <button class="bet-btn" data-amt="1000">1K</button>
+      <button class="bet-btn" data-amt="10000">10K</button>
+      <button class="bet-btn" data-amt="100000">100K</button>
+      <button class="bet-btn" data-amt="1000000">1M</button>
+      <button class="bet-btn" data-amt="10000000">10M</button>
+      <button class="bet-btn" data-amt="100000000">100M</button>
+    </div>
+
+    <!-- --- Countdown --- -->
+    <div class="countdown">
+      Quay tiếp trong <span id="timer">30</span>s
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
